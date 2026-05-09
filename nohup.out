@@ -45,3 +45,81 @@ SystemExit: 1
 [2026-05-09 07:47:04 +0000] [12460] [ERROR] Worker (pid:12465) was sent SIGKILL! Perhaps out of memory?
 [2026-05-09 07:47:04 +0000] [12509] [INFO] Booting worker with pid: 12509
 [2026-05-09 07:47:04 +0000] [12460] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+[2026-05-09 08:43:18 +0000] [12460] [CRITICAL] WORKER TIMEOUT (pid:12509)
+[2026-05-09 08:43:18 +0000] [12509] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 140, in handle
+    req = next(parser)
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/parser.py", line 111, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 459, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 199, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 471, in parse
+    self.read_into(unreader, buf, stop=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 605, in read_into
+    data = unreader.read()
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/unreader.py", line 65, in chunk
+    return self.sock.recv(self.mxchunk)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/workers/base.py", line 198, in handle_abort
+    sys.exit(1)
+    ~~~~~~~~^^^
+SystemExit: 1
+[2026-05-09 08:43:19 +0000] [12460] [ERROR] Worker (pid:12509) was sent SIGKILL! Perhaps out of memory?
+[2026-05-09 08:43:19 +0000] [13481] [INFO] Booting worker with pid: 13481
+[2026-05-09 08:43:19 +0000] [12460] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+[2026-05-09 08:43:50 +0000] [12460] [CRITICAL] WORKER TIMEOUT (pid:13481)
+[2026-05-09 08:43:50 +0000] [13481] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 140, in handle
+    req = next(parser)
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/parser.py", line 111, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 459, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 199, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 471, in parse
+    self.read_into(unreader, buf, stop=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 605, in read_into
+    data = unreader.read()
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/unreader.py", line 65, in chunk
+    return self.sock.recv(self.mxchunk)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/workers/base.py", line 198, in handle_abort
+    sys.exit(1)
+    ~~~~~~~~^^^
+SystemExit: 1
+[2026-05-09 08:43:51 +0000] [12460] [ERROR] Worker (pid:13481) was sent SIGKILL! Perhaps out of memory?
+[2026-05-09 08:43:51 +0000] [13483] [INFO] Booting worker with pid: 13483
+[2026-05-09 08:43:51 +0000] [12460] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+[2026-05-09 08:49:13 +0000] [12460] [INFO] Handling signal: term
+[2026-05-09 08:49:13 +0000] [13483] [INFO] Worker exiting (pid: 13483)
+[2026-05-09 08:49:13 +0000] [12460] [INFO] Worker (pid:13483) was sent SIGTERM!
+[2026-05-09 08:49:13 +0000] [13672] [INFO] Starting gunicorn 26.0.0
+[2026-05-09 08:49:13 +0000] [13672] [INFO] Listening at: http://0.0.0.0:5000 (13672)
+[2026-05-09 08:49:13 +0000] [13672] [INFO] Using worker: sync
+[2026-05-09 08:49:13 +0000] [13677] [INFO] Booting worker with pid: 13677
+[2026-05-09 08:49:13 +0000] [13672] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+[2026-05-09 08:49:13 +0000] [12460] [INFO] Shutting down: Master
+[2026-05-09 08:52:40 +0000] [13672] [INFO] Handling signal: term
+[2026-05-09 08:52:40 +0000] [13677] [INFO] Worker exiting (pid: 13677)
+[2026-05-09 08:52:40 +0000] [13672] [INFO] Worker (pid:13677) was sent SIGTERM!
+[2026-05-09 08:52:40 +0000] [13766] [INFO] Starting gunicorn 26.0.0
+[2026-05-09 08:52:40 +0000] [13766] [INFO] Listening at: http://0.0.0.0:5000 (13766)
+[2026-05-09 08:52:40 +0000] [13766] [INFO] Using worker: sync
+[2026-05-09 08:52:40 +0000] [13771] [INFO] Booting worker with pid: 13771
+[2026-05-09 08:52:40 +0000] [13672] [INFO] Shutting down: Master
+[2026-05-09 08:52:40 +0000] [13766] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl

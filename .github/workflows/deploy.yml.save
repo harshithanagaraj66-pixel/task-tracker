@@ -1,4 +1,7 @@
-name: Deploy Task Tracker
+with:
+  host: ${{ secrets.HOST }}
+  username: ubuntu
+  key: ${{ secrets.SSH_KEY }}name: Deploy Task Tracker
 
 on:
   push:
