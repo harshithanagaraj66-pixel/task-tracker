@@ -1,12 +1,39 @@
-[2026-05-09 09:40:00 +0000] [14571] [INFO] Starting gunicorn 26.0.0
-[2026-05-09 09:40:00 +0000] [14571] [ERROR] Connection in use: ('0.0.0.0', 5000)
-[2026-05-09 09:40:00 +0000] [14571] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
-[2026-05-09 09:40:01 +0000] [14571] [ERROR] Connection in use: ('0.0.0.0', 5000)
-[2026-05-09 09:40:01 +0000] [14571] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
-[2026-05-09 09:40:02 +0000] [14571] [ERROR] Connection in use: ('0.0.0.0', 5000)
-[2026-05-09 09:40:02 +0000] [14571] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
-[2026-05-09 09:40:03 +0000] [14571] [ERROR] Connection in use: ('0.0.0.0', 5000)
-[2026-05-09 09:40:03 +0000] [14571] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
-[2026-05-09 09:40:04 +0000] [14571] [ERROR] Connection in use: ('0.0.0.0', 5000)
-[2026-05-09 09:40:04 +0000] [14571] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
-[2026-05-09 09:40:05 +0000] [14571] [ERROR] Can't connect to ('0.0.0.0', 5000)
+[2026-05-09 09:43:35 +0000] [14737] [INFO] Starting gunicorn 26.0.0
+[2026-05-09 09:43:35 +0000] [14737] [INFO] Listening at: http://0.0.0.0:5000 (14737)
+[2026-05-09 09:43:35 +0000] [14737] [INFO] Using worker: sync
+[2026-05-09 09:43:35 +0000] [14738] [INFO] Booting worker with pid: 14738
+[2026-05-09 09:43:35 +0000] [14737] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+[2026-05-09 09:47:19 +0000] [14737] [CRITICAL] WORKER TIMEOUT (pid:14738)
+[2026-05-09 09:47:19 +0000] [14738] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 140, in handle
+    req = next(parser)
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/parser.py", line 111, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 459, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 199, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 471, in parse
+    self.read_into(unreader, buf, stop=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/message.py", line 605, in read_into
+    data = unreader.read()
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/http/unreader.py", line 65, in chunk
+    return self.sock.recv(self.mxchunk)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/ubuntu/task-tracker/venv/lib/python3.14/site-packages/gunicorn/workers/base.py", line 198, in handle_abort
+    sys.exit(1)
+    ~~~~~~~~^^^
+SystemExit: 1
+[2026-05-09 09:47:20 +0000] [14737] [ERROR] Worker (pid:14738) was sent SIGKILL! Perhaps out of memory?
+[2026-05-09 09:47:20 +0000] [14743] [INFO] Booting worker with pid: 14743
+[2026-05-09 09:47:20 +0000] [14737] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+[2026-05-09 09:52:54 +0000] [14737] [INFO] Handling signal: term
+[2026-05-09 09:52:54 +0000] [14743] [INFO] Worker exiting (pid: 14743)
+[2026-05-09 09:52:54 +0000] [14737] [INFO] Worker (pid:14743) was sent SIGTERM!
+[2026-05-09 09:52:54 +0000] [14737] [INFO] Shutting down: Master

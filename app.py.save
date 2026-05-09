@@ -55,25 +55,11 @@ def login():
             return "❌ Invalid username or password"
 
     return render_template('login.html')
-    return render_template('login.html')
-
-@app.route('/delete/<int:task_id>')
-def delete_task(task_id):
-    if 'user' not in session:
-        return redirect('/login')
-
-    username = session['user']
-
-    conn = sqlite3.connect('tasks.db')
-    conn.execute(
-        "DELETE FROM tasks WHERE id=? AND username=?",
-        (task_id, username)
-    )
-    conn.commit()
-    conn.close()
-
-    return redirect('/dashboard')
-
+    return render_template('login.htm@app.route('/delete/<int:index>')
+def delete_task(index):
+    if 0 <= index < len(tasks):
+        tasks.pop(index)
+    return redirect('/dashboa
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
     if 'user' not in session:
@@ -91,23 +77,19 @@ def dashboard():
         conn.commit()
 
     cur = conn.execute(
-        "SELECT id, task FROM tasks WHERE username=?",
+        "SELECT * FROM tasks WHERE username=?",
         (username,)
     )
-
     tasks = cur.fetchall()
     conn.close()
 
     return render_template('dashboard.html', tasks=tasks, username=username)
-
-@app.route('/delete/<int:id>')
-def delete(id):
     conn = sqlite3.connect('tasks.db')
     conn.execute("DELETE FROM tasks WHERE id=?", (id,))
     conn.commit()
     conn.close()
     return redirect('/dashboard')
-    
+
 @app.route('/logout')
 def logout():
     session.pop('user', None)
