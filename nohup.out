@@ -123,3 +123,7 @@ SystemExit: 1
 [2026-05-09 08:52:40 +0000] [13771] [INFO] Booting worker with pid: 13771
 [2026-05-09 08:52:40 +0000] [13672] [INFO] Shutting down: Master
 [2026-05-09 08:52:40 +0000] [13766] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+[2026-05-09 09:13:58 +0000] [13766] [INFO] Handling signal: term
+[2026-05-09 09:13:58 +0000] [13771] [INFO] Worker exiting (pid: 13771)
+[2026-05-09 09:13:58 +0000] [13766] [INFO] Worker (pid:13771) was sent SIGTERM!
+[2026-05-09 09:13:58 +0000] [13766] [INFO] Shutting down: Master
