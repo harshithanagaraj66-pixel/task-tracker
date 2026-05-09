@@ -1,0 +1,17 @@
+[2026-05-09 07:44:13 +0000] [12311] [INFO] Starting gunicorn 26.0.0
+[2026-05-09 07:44:13 +0000] [12311] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2026-05-09 07:44:13 +0000] [12311] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2026-05-09 07:44:14 +0000] [12311] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2026-05-09 07:44:14 +0000] [12311] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2026-05-09 07:44:15 +0000] [12311] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2026-05-09 07:44:15 +0000] [12311] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2026-05-09 07:44:16 +0000] [12311] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2026-05-09 07:44:16 +0000] [12311] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2026-05-09 07:44:17 +0000] [12311] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2026-05-09 07:44:17 +0000] [12311] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2026-05-09 07:44:18 +0000] [12311] [ERROR] Can't connect to ('0.0.0.0', 5000)
+[2026-05-09 07:46:19 +0000] [12460] [INFO] Starting gunicorn 26.0.0
+[2026-05-09 07:46:19 +0000] [12460] [INFO] Listening at: http://0.0.0.0:5000 (12460)
+[2026-05-09 07:46:19 +0000] [12460] [INFO] Using worker: sync
+[2026-05-09 07:46:19 +0000] [12465] [INFO] Booting worker with pid: 12465
+[2026-05-09 07:46:19 +0000] [12460] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
