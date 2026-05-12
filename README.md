@@ -1,3 +1,3 @@
 ## Live Demo
 
-[Open Deployed Application](http://44.247.231.254:5000)
+[Open Deployed Application](http://35.88.214.222:5000)
